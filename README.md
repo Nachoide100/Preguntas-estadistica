@@ -137,6 +137,53 @@ Repositorio de conceptos fundamentales y avanzados de estadística para el anál
   Entre las principales medidas que podemos tomar para evitar estos problemas son la **corrección de Bonferroni** (dividir el nivel de error por el número de pruebas a realizar) y el **Holdout Set** (guardar datos de reserva para una comprobación en datos nuevos una vez pensamos que hemos encontrado algo).
 </details>
 
+### 📖 ¿En qué consiste el compromiso entre sesgo y varianza (bias-variance trade-off) y cómo influye en el fenómeno del sobreajuste (overfitting)?
+<details>
+  <summary><b>Ver respuesta 🔑</b></summary>
+
+Existe un relación inversa entre ellos: si intentamos reducir el sesgo (haciendo el modelo más complejo), la varianza tiende a subir automáticamente. Por el contrario, si intentamos que el modelo sea muy estable y tenga poca varianza, probablemente será demasiado simple y aumentará el sesgo. 
+
+El fenómeno del sobreajuste ocurre cuando perdemos el equilibrio y dejamos que la varianza aumente drásticamente. Esto provoca un modelo “demasiado flexible” que aprende tan bien los datos de entrenamiento que incluye en su lógica los errores aleatorios y el ruido que no se repetirán el futuro. 
+
+De este modo, si miramos los resultados del enternamiento, se acercarán mucho al objetivo real pero al presentarle al modelo datos nuevos que nunca haya visto, su rendimiento caerá drásticamente porque esos datos nuevos no presentan ese “ruido” del cual ha aprendido en los datos de entrenamiento. 
+
+Para evitar el sobreajuste, debemos aceptar un poco más de sesgo (modelo algo más simple) a cambio de reducir la varianza, asegurando así que nuestra máquina puede generalizar lo aprendido en situaciones y conjuntos de datos nuevos.
+</details>
+
+### 📖 Explica detalladamente qué es un valor p (p-value) y por qué un resultado estadísticamente significativo no siempre implica una importancia práctica para el negocio.
+<details>
+  <summary><b>Ver respuesta 🔑</b></summary>
+
+El p - value es la probabilidad de que, aceptando la hipótesis nula, el resultado esperado se de por casualidad. 
+
+Si el p valor es bajo (menor o igual que 0,05) significa que es muy poco probable que el azar sea responsable y por tanto rechazaremos la hipótesis nula y concluiremos que el resultado es “estadísticamente significativo”. Si por el contrario el valor p es mayor a 0,05, significa que lo que observamos entra dentro de lo que el azar podría poducir normalmente. 
+
+Uno de los aspectos clave del p - value es que solo nos indica si el resultado es debido a un efecto real, pero no indica el tamaño de ese efecto. Esto supone que aplicar una medida validada por el p - value provoque una diferencia tan pequeña que no tenga sentido para el negocio.
+</details>
+
+### 📖 ¿Qué es la multicolinealidad en un modelo de regresión lineal múltiple y qué impacto tiene sobre la estabilidad y la interpretación de los coeficientes de las variables independientes?
+<details>
+  <summary><b>Ver respuesta 🔑</b></summary>
+
+La multicolinealidad es una condición que ocurre en los modelos estadísticos cuando dos o más de las variables que usas para predecir un resultado están fuertemente relacionadas entre sí. 
+
+Cuando existe multicolinealidad, el modelo se vuelve matemáticamente inestable, lo que puede provocar que cualquier cambio mínimo en los datos de entrada deriven en cambios drásticos en los resultados del modelo, lo que hace que las conclusiones sean poco fiables. 
+
+El problema más grande es que este fenómeno impide saber qué variable es la verdadera responsable del resultado, ya que las variables correlacionadas tienden a “cancelarse” entre sí en los cálculos. Además, la multicolinealidad infla el error estándar (mayor inestabilidad), lo que significa que el modelo pierde mucha precisión al tratar de estimar qué tan importante es realmente cada factor.
+</details>
+
+
+### 📖 ¿Qué es la multicolinealidad en un modelo de regresión lineal múltiple y qué impacto tiene sobre la estabilidad y la interpretación de los coeficientes de las variables independientes?
+<details>
+  <summary><b>Ver respuesta 🔑</b></summary>
+
+La multicolinealidad es una condición que ocurre en los modelos estadísticos cuando dos o más de las variables que usas para predecir un resultado están fuertemente relacionadas entre sí. 
+
+Cuando existe multicolinealidad, el modelo se vuelve matemáticamente inestable, lo que puede provocar que cualquier cambio mínimo en los datos de entrada deriven en cambios drásticos en los resultados del modelo, lo que hace que las conclusiones sean poco fiables. 
+
+El problema más grande es que este fenómeno impide saber qué variable es la verdadera responsable del resultado, ya que las variables correlacionadas tienden a “cancelarse” entre sí en los cálculos. Además, la multicolinealidad infla el error estándar (mayor inestabilidad), lo que significa que el modelo pierde mucha precisión al tratar de estimar qué tan importante es realmente cada factor.
+</details>
+
 ---
 
 ## 🟡 Nivel: Intermedio
